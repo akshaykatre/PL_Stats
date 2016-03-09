@@ -1,0 +1,8 @@
+09-Mar-2016	Akshay
+		* Added a new plotting module
+		* Added new fouls module
+		* New bar plots for analysing fouls
+			* Ratio of home to away yellow cards
+			* N. fouls per yellow card: home and away
+		* Redefined totals_shots to total_plots - a generic plotting function
+		
