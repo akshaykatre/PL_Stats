@@ -2,7 +2,10 @@ import pandas
 from Shots import shots, percent_vs_shot_plot
 from Fouls import fouls
 from Plotting import totals_plot, detailbars 
+from Results import results
 import matplotlib.pyplot as plt
+
+
 
 x = pandas.read_csv("2013-2014.csv")
 teams = x.HomeTeam.unique()
@@ -62,7 +65,6 @@ times_away_yellow = {m:round(z/float(y),2) for m,y,z in zip(home_yellows.iterkey
 
 times_away_yellow_plot = totals_plot(times_away_yellow, m_teams, ylabel="Yellow cards away/ yellow cards at home")
 
-
 # Estimating the number of fouls before being shown a yellow 
 # card per team; This idea is extended to home and away teams 
 # as well showing that home teams have an advantage
@@ -73,3 +75,4 @@ away_prone_yellows = {m:round(away_fouls[m]/float(away_yellows[m]),2) for m in s
 # Bar graph showing the number of fouls per yellow card
 yellow_proneness = detailbars(prone_yellows, home_prone_yellows, away_prone_yellows, m_teams, ylabel="Number of fouls per yellow card")
 
+total_ft, home_ft, away_ft, total_ht, home_ht, away_ht = results(x, sorted(teams))

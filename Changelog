@@ -5,4 +5,4 @@
 			* Ratio of home to away yellow cards
 			* N. fouls per yellow card: home and away
 		* Redefined totals_shots to total_plots - a generic plotting function
-		
+		* Added Results module

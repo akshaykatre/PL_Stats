@@ -26,25 +26,6 @@ def shots(in_csv, teams):
     return total_shots, avg_shots, on_target
 
 
-# def totalshot_plot(total, m_teams):
-#     t_names = []
-#     t_shots = []
-#     t_names_names = []
-#     for i in sorted(total.iteritems()):
-#         t_names.append(m_teams[i[0]])
-#         t_shots.append(i[1])
-#         t_names_names.append(i[0])
-
-#     fig = plt.figure()
-#     ax = fig.add_subplot(111)
-#     plt.bar(t_names, t_shots, width=1)
-#     plt.xticks(arange(1.2,21.2), (t_names_names), rotation=50)
-#     plt.xlim([-1, 22])
-#     for index, i in enumerate(t_shots):
-#         ax.annotate(str(i), xy=(index+1.2,i), xytext=(0,20), textcoords='offset points')
-
-#     return plt
-
 
 def percent_vs_shot_plot(total, percent, names):
     fig = plt.figure()

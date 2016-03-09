@@ -26,7 +26,6 @@ def totals_plot(total, m_teams, xlabel=None, ylabel="Total "):
 
 
 def detailbars(total, home, away, m_teams, xlabel=None, ylabel=None):
-#    print len(total)
     ind = arange(1,len(total)+1)
     width = 0.25
     t_names = [m_teams[i] for i in sorted(total.iterkeys())]
@@ -34,7 +33,6 @@ def detailbars(total, home, away, m_teams, xlabel=None, ylabel=None):
     t_value = [total[i] for i in sorted(total)]
     t_value_home = [home[i] for i in sorted(home)]
     t_value_away = [away[i] for i in sorted(away)]
-    print t_value_home, t_value_away, t_names_names
     fig, ax = plt.subplots()
     plot_total = ax.bar(ind, t_value, width, color='r')
     plot_home = ax.bar(ind+width, t_value_home, width, color='b')
